@@ -8,8 +8,8 @@ boxplot(Sales_X1,main = "Box plot for sales",outline = TRUE,outpch = 8, horizont
 summary(Advertising_X2)
 IQR(Advertising_X2)
 get.outliers<- function(z){
-  q1<- quantile(z)[0.25]
-  q3 <- quantile(z)[0.75]
+  q1<- quantile(z)[2]
+  q3 <- quantile(z)[4]
   iqr <- q1 -q3
   
   ub <- q3 +1.5 * iqr
@@ -23,3 +23,4 @@ get.outliers<- function(z){
 get.outliers(Sales_X1)
 get.outliers(Advertising_X2)
 get.outliers(Years_X3)
+
